@@ -14,9 +14,15 @@ The json package will look like this:
   "express": "^4.13.3"
 }
 ```
-3. Create a folder call "views" and add a file call "default.ejs".
 
-4. In the default.ejs file, create an html file.
+3. Call the engine... allows me to set variables for express, since we are calling the engine we need to use templates - that are in a views directory.
+```
+app.set('view engine', 'ejs');
+```
+
+4. Create a folder call "views" and add a file call "default.ejs".
+
+5. In the default.ejs file, create an html file.
 
 ```html
 <!DOCTYPE html>
@@ -34,7 +40,7 @@ The json package will look like this:
 </html>
 ```
 
-5. Go to app.js and change the root file.
+6. Go to app.js and change the root file.
 
 ```javascript
 app.get('/', function (req,res) {
@@ -42,4 +48,4 @@ app.get('/', function (req,res) {
 });
 ```
 
-6. Save the file, go to the terminal, type localhost:3000
+7. Save the file, go to the terminal, type localhost:3000
